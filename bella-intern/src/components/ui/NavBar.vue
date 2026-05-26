@@ -1,20 +1,17 @@
-
 <template>
-   
-    <nav class="bg-white border-b border-gray-300 shadow sticky top-0">
-     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <RouterLink to="/">
-            <div class="text-xl font-bold text-blue-600
-            ">RepoMap</div>
-        </RouterLink>
-        <div class="flex items-center gap-6">
-            
-            <RouterLink>
-                
-            </RouterLink>
+  <nav class="bg-gray-900 text-white p-4">
+    <div class="flex justify-between items-center">
+      
+      
+      <h1 class="text-xl font-bold">~TEMBERA~</h1>
 
-        </div>
      
-     </div>
-    </nav>
+      <div class="space-x-4">
+        <a href="#" class="hover:text-blue-400">Home</a>
+        <a href="#" class="hover:text-blue-400">About</a>
+        <a href="#" class="hover:text-blue-400">Contact</a>
+      </div>
+
+    </div>
+  </nav>
 </template>
