@@ -1,5 +1,8 @@
 <script setup>
 import logo from '../assets/images/logo.jpeg'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -17,7 +20,7 @@ import logo from '../assets/images/logo.jpeg'
     ></div>
 
     <div
-      class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-emerald-100 blur-3xl rounded-full opacity-50"
+      class="absolute bottom-0 right-0 w-125 h-125 bg-emerald-100 blur-3xl rounded-full opacity-50"
     ></div>
 
     <!-- CONTENT -->
@@ -33,30 +36,15 @@ import logo from '../assets/images/logo.jpeg'
           <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
 
           <p class="text-sm font-semibold uppercase tracking-wider">
-            Visit Rwanda Today
+            {{ t('home.tag') }}
           </p>
         </div>
 
         <!-- Heading -->
-        <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900 mb-6"
-        >
-          Explore The Beauty of
-          <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400"
-          >
-            Rwanda
-          </span>
-        </h1>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900 mb-6">{{ t('home.title') }}</h1>
 
         <!-- Description -->
-        <p
-          class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
-        >
-          Discover breathtaking landscapes, vibrant culture,
-          mountain gorillas, beautiful lakes, and unforgettable
-          adventures in the Land of a Thousand Hills.
-        </p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">{{ t('home.subtitle') }}</p>
 
         <!-- FEATURES -->
         <div class="grid sm:grid-cols-2 gap-6 mb-10">
@@ -195,7 +183,7 @@ import logo from '../assets/images/logo.jpeg'
           <img
             :src="logo"
             alt="Rwanda"
-            class="w-full h-[650px] object-cover hover:scale-105 transition duration-700"
+            class="w-full h-162.5 object-cover hover:scale-105 transition duration-700"
           />
         </div>
 

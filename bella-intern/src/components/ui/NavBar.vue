@@ -1,29 +1,50 @@
 <template>
   <nav class="bg-green-800 text-white px-8 py-4 flex items-center justify-between shadow-lg">
-    <img src="../../assets/images/logo.jpeg"alt="logo" class="h-10">
-    
-    
-    <ul class="flex gap-8 text-sm font-medium">
-        <li><a href="/" class="hover:text-yellow-300">Home</a></li>
-        <li><a href="/About" class="hover:text-yellow-300">About </a></li>
-        <li><a href="/Service" class="hover:text-yellow-300">Services</a></li>
+    <img src="../../assets/images/logo.jpeg" alt="logo" class="h-10">
 
-        <li class="relative group"><a href="#" class="hover:text-yellow-300">Gallery<span>⏑</span></a>
-        <ul class="invisible group-hover:visible opacity-0 group-hover: opacity-100 absolute bg-white text-green-900 rounded shadow w-48 top-full left-0 z-50">
-           <li ><a href="/Photo" class="block px-4 py-2 hover:bg-green-200 text-green-900">Photos</a></li>
-           <li ><a href="/Video" class="block px-4 py-2 hover:bg-green-200 text-green-900">Videos</a></li>
-           </ul>
-        </li>
-        <li class="relative group"><a href="#" class="hover:text-yellow-300">Destination<span>⏑</span></a>
-        <ul class="invisible group-hover:visible opacity-0 group-hover: opacity-100 absolute bg-white text-green-900 rounded shadow w-48 top-full left-0 z-50">
-           <li ><a href="/North" class="block px-4 py-2 hover:bg-green-200 text-green-900">Northern Province</a></li>
-           <li ><a href="/South" class="block px-4 py-2 hover:bg-green-200 text-green-900">Southern Province</a></li>
-           <li ><a href="/West" class="block px-4 py-2 hover:bg-green-200 text-green-900">Western Province</a></li>
-           <li ><a href="/East" class="block px-4 py-2 hover:bg-green-200 text-green-900">Eastern Province</a></li>
-           <li ><a href="/Kigali" class="block px-4 py-2 hover:bg-green-200 text-green-900">Kigali City</a></li>
-           </ul>
-           </li>
-        <li><a href="/Contact" class="hover:text-yellow-300">Contact</a></li>
+    <ul class="flex gap-8 text-sm font-medium items-center">
+      <li><router-link to="/" class="hover:text-yellow-300">{{ navLabels.home }}</router-link></li>
+      <li><router-link to="/About" class="hover:text-yellow-300">{{ navLabels.about }}</router-link></li>
+      <li><router-link to="/Service" class="hover:text-yellow-300">{{ navLabels.services }}</router-link></li>
+
+      <li class="relative group">
+        <a href="#" class="hover:text-yellow-300">{{ navLabels.gallery }}<span>⏑</span></a>
+        <ul class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-white text-green-900 rounded shadow w-48 top-full left-0 z-50">
+          <li><router-link to="/Photos" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.photos }}</router-link></li>
+          <li><router-link to="/Video" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.videos }}</router-link></li>
+        </ul>
+      </li>
+
+      <li class="relative group">
+        <a href="#" class="hover:text-yellow-300">{{ navLabels.destination }}<span>⏑</span></a>
+        <ul class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute bg-white text-green-900 rounded shadow w-48 top-full left-0 z-50">
+          <li><router-link to="/North" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.north }}</router-link></li>
+          <li><router-link to="/South" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.south }}</router-link></li>
+          <li><router-link to="/West" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.west }}</router-link></li>
+          <li><router-link to="/East" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.east }}</router-link></li>
+          <li><router-link to="/Kigali" class="block px-4 py-2 hover:bg-green-200 text-green-900">{{ navLabels.kigali }}</router-link></li>
+        </ul>
+      </li>
+      <li><router-link to="/Contact" class="hover:text-yellow-300">{{ navLabels.contact }}</router-link></li>
+
+      <li class="flex items-center">
+        <label for="language" class="sr-only">Language</label>
+        <select
+          id="language"
+          v-model="language"
+          class="bg-green-700 border border-green-600 text-white rounded-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
+        >
+          <option value="eng">English</option>
+          <option value="kin">Kinyarwanda</option>
+          <option value="fra">Français</option>
+        </select>
+      </li>
     </ul>
   </nav>
 </template>
+
+<script setup>
+import { useI18n } from '../../composables/useI18n'
+
+const { language, navLabels, setLanguage } = useI18n()
+</script>

@@ -1,3 +1,8 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <template>
   <!-- ABOUT SECTION -->
   <section
@@ -5,29 +10,17 @@
   >
     <!-- HERO HEADER (NEW TOP CONTENT) -->
     <div class="relative z-10 text-center max-w-3xl mx-auto mb-16">
-      <p class="text-green-600 font-semibold tracking-[4px] uppercase mb-4">
-        Discover Rwanda
-      </p>
+      <p class="text-green-600 font-semibold tracking-[4px] uppercase mb-4">{{ t('about.tag') }}</p>
 
       <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-        A Journey Through
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400"
-        >
-          Nature & Culture
-        </span>
+        {{ t('about.headingPrefix') }}
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-400">{{ t('about.headingHighlight') }}</span>
       </h2>
 
-      <p class="text-gray-600 mt-6 text-lg">
-        Explore breathtaking landscapes, rich traditions, and unforgettable adventures
-        in the heart of Africa.
-      </p>
+      <p class="text-gray-600 mt-6 text-lg">{{ t('about.subtitle1') }}</p>
     </div>
 
     <!-- Decorative Background -->
-    <div
-      class="absolute top-0 left-0 w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-40"
-    ></div>
 
     <div
       class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-emerald-100 rounded-full blur-3xl opacity-50"
@@ -53,20 +46,15 @@
           class="absolute -bottom-8 -left-8 bg-white rounded-3xl shadow-2xl p-6 w-64"
         >
           <h2 class="text-4xl font-extrabold text-green-600">1000+</h2>
-          <p class="text-gray-600 mt-2">
-            Beautiful hills and breathtaking landscapes.
-          </p>
+          <p class="text-gray-600 mt-2">{{ t('about.subtitle2') }}</p>
         </div>
 
         <!-- Floating Experience Card -->
         <div
           class="absolute top-8 -right-8 bg-green-600 text-white rounded-3xl shadow-2xl p-6 w-72"
         >
-          <h3 class="text-2xl font-bold mb-3">Why Visit Rwanda?</h3>
-          <p class="text-green-100 leading-relaxed">
-            Experience wildlife, culture, adventure, modern cities, and
-            unforgettable hospitality.
-          </p>
+          <h3 class="text-2xl font-bold mb-3">{{ t('about.headingHighlight') }}?</h3>
+          <p class="text-green-100 leading-relaxed">{{ t('about.subtitle1') }}</p>
         </div>
       </div>
 
@@ -181,17 +169,9 @@
 
         <!-- BUTTONS -->
         <div class="flex flex-col sm:flex-row gap-5">
-          <button
-            class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition duration-300"
-          >
-            Explore Rwanda
-          </button>
+          <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition duration-300">{{ t('about.ctaExplore') }}</button>
 
-          <button
-            class="border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300"
-          >
-            Learn More
-          </button>
+          <button class="border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300">{{ t('about.ctaLearn') }}</button>
         </div>
       </div>
     </div>
