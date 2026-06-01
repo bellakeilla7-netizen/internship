@@ -41,13 +41,13 @@ const galleries = [
 </script>
 
 <template>
-  <section class="relative min-h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
-    style="background: linear-gradient(135deg, #7cb342 0%, #9ccc65 100%);">
-    <div class="absolute inset-0 bg-black/30"></div>
+  <section class="relative min-h-125 bg-cover bg-center flex items-center justify-center overflow-hidden"
+    :style="{ backgroundImage: `url(${landscape})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+    <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative z-10 text-center text-white px-6">
-      <span class="inline-block bg-yellow-400 text-green-900 px-5 py-2 rounded-full text-sm font-semibold mb-6">🇷🇼 {{ t('east.title') }}</span>
+      <span class="inline-block bg-green-500 text-emerald-950 px-5 py-2 rounded-full text-sm font-semibold mb-6">🇷🇼 {{ t('east.title') }}</span>
       <h1 class="text-6xl md:text-7xl font-extrabold mb-6">{{ t('east.title') }}</h1>
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto">{{ t('east.subtitle') }}</p>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto">Discover tea hills, cultural villages, and quiet Eastern Rwanda adventures.</p>
     </div>
   </section>
 

@@ -41,13 +41,13 @@ const galleries = [
 </script>
 
 <template>
-  <section class="relative min-h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
-    style="background: linear-gradient(135deg, #d4a574 0%, #c19a6b 100%);">
-    <div class="absolute inset-0 bg-black/30"></div>
+  <section class="relative min-h-125 bg-cover bg-center flex items-center justify-center overflow-hidden"
+    :style="{ backgroundImage: `url(${national})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+    <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative z-10 text-center text-white px-6">
-      <span class="inline-block bg-yellow-400 text-amber-900 px-5 py-2 rounded-full text-sm font-semibold mb-6">🇷🇼 {{ t('south.title') }}</span>
+      <span class="inline-block bg-amber-500 text-amber-950 px-5 py-2 rounded-full text-sm font-semibold mb-6">🇷🇼 {{ t('south.title') }}</span>
       <h1 class="text-6xl md:text-7xl font-extrabold mb-6">{{ t('south.title') }}</h1>
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto">{{ t('south.subtitle') }}</p>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto">Safari wildlife, lakeside escapes, and wide-open southern landscapes await.</p>
     </div>
   </section>
 
@@ -83,7 +83,7 @@ const galleries = [
 
     
 
-    <div class="bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-xl p-10 mb-10">
+    <div class="bg-linear-to-r from-amber-600 to-yellow-600 text-white rounded-xl p-10 mb-10">
       <h2 class="text-3xl font-bold mb-4">Best Time to Visit</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div>

@@ -41,14 +41,14 @@ const galleries = [
 
 <template>
   <section class="relative min-h-125 bg-cover bg-center flex items-center justify-center overflow-hidden"
-    style="background: linear-gradient(135deg, #00897b 0%, #00bcd4 100%);">
-    <div class="absolute inset-0 bg-black/30"></div>
+    :style="{ backgroundImage: `url(${kivu})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+    <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative z-10 text-center text-white px-6">
-      <span class="inline-block bg-yellow-400 text-teal-900 px-5 py-2 rounded-full text-sm font-semibold mb-6">
+      <span class="inline-block bg-teal-500 text-teal-950 px-5 py-2 rounded-full text-sm font-semibold mb-6">
         🇷🇼 Western Province
       </span>
         <h1 class="text-6xl md:text-7xl font-extrabold mb-6">{{ t('nav.west') }}</h1>
-        <p class="text-xl md:text-2xl max-w-3xl mx-auto">{{ t('photos.subtitle') }}</p>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Lake Kivu sunsets, rainforest trails, and lakeside relaxation define the West.</p>
     </div>
   </section>
 
