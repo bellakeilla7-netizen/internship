@@ -6,7 +6,7 @@
       <div class="absolute top-0 left-0 right-0 h-1 z-30 flex">
         <div class="flex-1 bg-[#20603D]"/><div class="flex-1 bg-[#FAD201]"/><div class="flex-1 bg-[#1F4A9B]"/>
       </div>
-      <img src="../assets/images/landscapes.jpg" alt="Rwanda"
+      <img src="../assets/images/landscape.jpeg" alt="Rwanda"
         class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms]"
         :class="loaded ? 'scale-100' : 'scale-110'" @load="loaded=true"/>
       <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/30 to-[#0a0f0a]"/>

@@ -65,7 +65,7 @@
         </div>
         <!-- COPYRIGT -->
          <div class="border-t border-green-600 mt-8 pt-4 text-sm text-green-">
-            <p class="text-center "> ©2025 TEMBERA U RWANDA. All rights reserved</p>
+            <p class="text-center "> DONE BY ASHIMWE SAM BELLA KEILLA</p>
 
          </div>
     </footer>
