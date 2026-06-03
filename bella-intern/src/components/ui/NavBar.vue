@@ -39,11 +39,14 @@
           <option value="fra">Français</option>
         </select>
       </li>
+      <li><RouterLink to="/Login" class="bg-yellow-400 text-green-900 px-4 py-1 rounded font-semibold hover:bg-yellow-500">Login</RouterLink></li>
+      <li><RouterLink to="/Register" class="bg-yellow-400 text-green-900 px-4 py-1 rounded font-semibold hover:bg-yellow-500">Register</RouterLink></li>
     </ul>
   </nav>
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router';
 import { useI18n } from '../../composables/useI18n'
 
 const { language, navLabels, setLanguage } = useI18n()

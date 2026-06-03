@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from 'vue-router';
+import { RouterView,useRoute } from 'vue-router';
 import NavBar from './components/ui/NavBar.vue';
 // import Home from './views/Home.vue'
 //  import About from './views/About.vue';
@@ -11,23 +11,13 @@ import NavBar from './components/ui/NavBar.vue';
 //  import South from './views/South.vue';
 //  import Kigali from './views/Kigali.vue';
 //  import East from './views/East.vue';
-import Footer from './components/ui/Footer.vue'
+import Footer from './components/ui/Footer.vue';
+
 </script>
 
 <template>
-    
-<NavBar/>
- <!-- <Home/>   -->
- <RouterView/>
-<!-- <About/>  -->
-<!-- <Service/> -->
-<!-- Photos/> -->
-<!-- <Video/> -->
-<!-- <West/> -->
-<!-- <North/> -->
-<!-- <South/> -->
-<!-- <Kigali/> -->
-<!-- <East/> -->
-<Footer/>
+  <NavBar />
+  <RouterView />
+  <Footer />
 
   </template>

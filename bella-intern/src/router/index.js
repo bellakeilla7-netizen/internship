@@ -11,9 +11,10 @@ import North from '../views/North.vue';
 import South from '../views/South.vue';
 import Kigali from '../views/Kigali.vue';
 import East from '../views/East.vue';
+import Login from '../views/Login.vue';
+import Register from '../views/Register.vue';
 
-
-
+import Dashboard from '../views/dashboard/dashboard.vue';
 
 const routes=[
     {
@@ -70,7 +71,23 @@ const routes=[
         path:"/East",
         name:"East",
         component:East
+    },
+    {
+        path:"/Login",
+        name:"Login",
+        component:Login
+    },
+    {
+        path:"/Register",
+        name:"Register",
+        component:Register
+    },
+    {
+        path:"/Dashboard",
+        name:"Dashboard",
+        component:Dashboard
     }
+
 
 
 ];
